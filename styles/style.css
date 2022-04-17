@@ -1,14 +1,87 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
 }
 
-#header{
+#header {
     min-width: 1024px;
     width: 100%;
     height: 250px;
+    margin: 0px auto;
 }
 
-body{
+#barra {
+    width: 100%;
+    background: #333333;
+    color: white;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#barra ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 550px;
+}
+
+#barra > ul > li {
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+}
+
+#barra > ul > li a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#barra > ul > li a:first-child {
+    border-left: 1px solid gray;
+}
+
+#barra > ul > li:hover {
+    background-color: #70b231;
+    box-shadow: 0px 0px 4px green inset;
+}
+
+
+#barra > ul > li > ul {
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+#barra > ul > li:hover > ul {
+    display: block;
+}
+
+#barra > ul > li:hover > ul > li {
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+#barra > ul > li:hover > ul > li a {
+    color: #666666;
+}
+
+#barra > ul > li:hover > ul > li:hover {
+    box-shadow: 0px 0px 6px #ccc inset;
+    background: rgb(238, 237, 237);
+}
+
+body {
     background: #ccc;
 }
